@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# 3. Implementation
 
-You can use the [editor on GitHub](https://github.com/Ameralshawabkeh/fpgaproject.github.io/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## Block design
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Below is the block diagram of the project, a better overview can be found in 
+the project repository [here](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png)
 
-### Markdown
+![Block Design](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png)
+<p align="center"> Fig.3.1 Call Nurse System Block Design  </p>  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Debouncer  
+The debouncing circuit used for mechanical switches/ buttons cause an unpredictable
+bounce in the signal when toggled. There are various ways to implement debouncing
+circuits for buttons on FPGA. 
+In this project, a two debouncing circuits are implemented in Verilog,
+the first one used to generate only a single pulse when pressing a button
+on FPGA and the second one used to generate only a single pulse when switching
+the switches on FPGA Boolean board.
 
-```markdown
-Syntax highlighted code block
+## Seven segment Display
 
-# Header 1
-## Header 2
-### Header 3
+## Simulation (Time diagram)
 
-- Bulleted
-- List
+The modules were tested separately where each one of them has its own testbench.
+The following waveform screenshots for servo_control and seven_segment_display
+modules show the correctness of the circuit functionalities. And regarding other modules, 
+it is preferable to simulate them locally since the range of the inputs is high.
 
-1. Numbered
-2. List
+ Call Nurse System Demo
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ameralshawabkeh/fpgaproject.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The following video illustrate the principal work of the one-way communication
+for Call Nurse system and its implementation.
