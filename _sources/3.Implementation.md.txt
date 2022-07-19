@@ -1,0 +1,48 @@
+# 3. Implementation
+
+## Block design
+
+Below is the block diagram of the project, a better overview can be found in 
+the project repository [here](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png)
+
+![Block Design](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png)
+<p align="center"> Fig.3.1 Call Nurse System Block Design  </p>  
+
+## Debouncer  
+The debouncing circuit used for mechanical switches/ buttons cause an unpredictable
+bounce in the signal when toggled. There are various ways to implement debouncing
+circuits for buttons on FPGA. 
+In this project, a two debouncing circuits are implemented in Verilog,
+the first one used to generate only a single pulse when pressing a button
+on FPGA and the second one used to generate only a single pulse when switching
+the switches on FPGA Boolean board.
+
+## Seven segment Display
+
+## Simulation (Time diagram)
+
+The modules were tested separately where each one of them has its own testbench.
+The following waveform screenshots for servo_control and seven_segment_display
+modules show the correctness of the circuit functionalities. And regarding other modules, 
+it is preferable to simulate them locally since the range of the inputs is high.
+
+ Call Nurse System Demo
+
+The following video illustrate the principal work of the one-way communication
+for Call Nurse system and its implementation.
+
+<video controls>
+	<source
+		src="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Video/call%20Nurse%20system1.mp4"
+		type="video/webm"
+	>
+</video>
+
+you can watch a demo video of the project [here](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/blob/main/Video/nurse%20call%20system.mp4)
+
+
+
+
+
+- What was your approach to the problem and what is your solution?
+- You should also include approaches that did not work.
