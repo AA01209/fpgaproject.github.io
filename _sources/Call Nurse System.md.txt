@@ -1,5 +1,0 @@
-# Literature research
-
-University: Deggendorf Institute of Technology\
-Course: FPGA programing\
-Done by: Amer Alshawabkeh
